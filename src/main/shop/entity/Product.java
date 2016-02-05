@@ -3,17 +3,22 @@ package main.shop.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
 public class Product implements Serializable{
     private Integer id;
     private String nameProduct;
-    private Integer availableProduct;
+    private Boolean availableProduct;
+    private Integer amount;
+    private String specificationsProduct;
+    private Integer priceProduct;
 
+
+    @Id
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     public Integer getId(){
         return id;
     }
@@ -30,12 +35,25 @@ public class Product implements Serializable{
         this.nameProduct = nameProduct;
     }
 
-    public Integer getAvailableProduct(){
+    public Boolean getAvailableProduct(){
         return availableProduct;
     }
 
-    public void setAvailableProduct(Integer availableProduct) {
+    public void setAvailableProduct(Boolean availableProduct) {
         this.availableProduct = availableProduct;
     }
 
+    public Integer getAmount() {return amount;}
+
+    public void setAmount(Integer amount) {this.amount = amount;}
+
+    public String getSpecifications() {return specificationsProduct;}
+
+    public void setSpecifications(String specificationsProduct) { this.specificationsProduct = specificationsProduct; }
+
+    public Integer getPriceProduct() {
+        return priceProduct;
+    }
+
+    public void setSpecificationsProduct(Integer priceProduct){ this.priceProduct = priceProduct;}
 }
