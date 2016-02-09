@@ -8,50 +8,58 @@ import java.io.Serializable;
 @Entity
 public class CoupWatch implements Serializable {
     private Integer id;
-    private String nameProduct;
-    private Boolean availableProduct;
+    private String nameCoupWatch;
+    private Boolean available;
     private Integer amount;
-    private String specificationsProduct;
-    private Integer priceProduct;
+    private String specificationsCoupWatch;
+    private Integer price;
 
 
     @Id
 
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     public Integer getId(){
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNameProduct(){
-        return nameProduct;
+    public String getNameCoupWatch(){
+        return nameCoupWatch;
+    }
+    public void setNameCoupWatch(String nameCoupWatch){
+        this.nameCoupWatch = nameCoupWatch;
     }
 
-    public void setNameProduct(String nameProduct){
-        this.nameProduct = nameProduct;
+    public Boolean getAvailable(){
+        return available;
     }
-
-    public Boolean getAvailableProduct(){
-        return availableProduct;
-    }
-
-    public void setAvailableProduct(Boolean availableProduct) {
-        this.availableProduct = availableProduct;
+    public void setAvailable(Boolean available) {
+        this.available = available;
     }
 
     public Integer getAmount() {return amount;}
-
     public void setAmount(Integer amount) {this.amount = amount;}
 
-    public String getSpecifications() {return specificationsProduct;}
+    public String getSpecificationsCoupWatch() {return specificationsCoupWatch;}
+    public void setSpecificationsCoupWatch(String specificationsCoupWatch) { this.specificationsCoupWatch = specificationsCoupWatch; }
 
-    public void setSpecifications(String specificationsProduct) { this.specificationsProduct = specificationsProduct; }
-    public Integer getPriceProduct() {
-        return priceProduct;
+    public Integer getPrice() {return price;}
+    public void setPrice(Integer price){ this.price = price;}
+
+  /*  public String viewAmountCoupWatch() {
+        String amountProduct = AVAILABLE_FALSE;
+        try {
+            if (isAvailable()) {
+                amountProduct=AVAILABLE_TRUE+getAmount();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return amountProduct;
+
     }
-
-    public void setSpecificationsProduct(Integer priceProduct){ this.priceProduct = priceProduct;}
+   */
 }

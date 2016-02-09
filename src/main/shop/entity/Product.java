@@ -56,4 +56,6 @@ public class Product implements Serializable{
     }
 
     public void setSpecificationsProduct(Integer priceProduct){ this.priceProduct = priceProduct;}
+
+
 }

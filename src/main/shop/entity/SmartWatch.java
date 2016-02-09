@@ -8,11 +8,11 @@ import java.io.Serializable;
 @Entity
 public class SmartWatch implements Serializable{
     private Integer id;
-    private String nameProduct;
-    private Boolean availableProduct;
+    private String nameSmartWatch;
+    private Boolean available;
     private Integer amount;
-    private String specificationsProduct;
-    private Integer priceProduct;
+    private String specificationsSmartWatch;
+    private Integer price;
 
 
     @Id
@@ -21,37 +21,32 @@ public class SmartWatch implements Serializable{
     public Integer getId(){
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNameProduct(){
-        return nameProduct;
+    public String getNameSmartWatch(){
+        return nameSmartWatch;
+    }
+    public void setNameSmartWatch(String nameSmartWatch){
+        this.nameSmartWatch = nameSmartWatch;
     }
 
-    public void setNameProduct(String nameProduct){
-        this.nameProduct = nameProduct;
+    public Boolean getAvailable(){
+        return available;
     }
-
-    public Boolean getAvailableProduct(){
-        return availableProduct;
-    }
-
-    public void setAvailableProduct(Boolean availableProduct) {
-        this.availableProduct = availableProduct;
+    public void setAvailable(Boolean available) {
+        this.available = available;
     }
 
     public Integer getAmount() {return amount;}
-
     public void setAmount(Integer amount) {this.amount = amount;}
 
-    public String getSpecifications() {return specificationsProduct;}
+    public String getSpecificationsSmartWatch() {return specificationsSmartWatch;}
+    public void setSpecificationsSmartWatch(String specificationsSmartWatch) { this.specificationsSmartWatch = specificationsSmartWatch; }
 
-    public void setSpecifications(String specificationsProduct) { this.specificationsProduct = specificationsProduct; }
-    public Integer getPriceProduct() {
-        return priceProduct;
+    public Integer getPrice() {
+        return price;
     }
-
-    public void setSpecificationsProduct(Integer priceProduct){ this.priceProduct = priceProduct;}
+    public void setPrice(Integer price){ this.price = price;}
 }
