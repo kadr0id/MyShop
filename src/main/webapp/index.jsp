@@ -1,13 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <table border="2" width="2" cellspacing="2" cellpadding="2" >
 <thead>
 <tr>
-    <th>№</th>
-    <th>Имя</th>
-    <th>Модель</th>
-    <th>Цена</th>
-    <th>Наличие</th>
-    <th>В корзину</th>
+    <th>в„–</th>
+    <th>РРјСЏ</th>
+    <th>РњРѕРґРµР»СЊ</th>
+    <th>Р¦РµРЅР°</th>
+    <th>РќР°Р»РёС‡РёРµ</th>
+    <th>Р’ РєРѕСЂР·РёРЅСѓ</th>
 </tr>
 </thead>
 <tbody>
@@ -20,9 +21,9 @@
         <td><c:out value="${Watch.viewAmount()}"/></td>
         <td>
             <form action="addToCartServlet" method="post" >
-                <input type="submit" name="" value="В корзину" />
-                <input type="hidden" name="nameItem"  value="${Watch.getNameWatch()}">
-                <input type="hidden" name="priceItem"  value="${Watch.getPrice()}">
+                <input type="submit" name="" value="Р’ РєРѕСЂР·РёРЅСѓ" />
+                <input type="hidden" name="nameItem"  value=${Watch.getNameWatch()}>
+                <input type="hidden" name="priceItem"  value=${Watch.getPrice()}>
                 <input type="hidden" name="target"  value="/notebook">
             </form>
         </td>
