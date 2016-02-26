@@ -1,4 +1,5 @@
 package main.hibernate;
+import main.service.cart.Cart;
 import main.shop.entity.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
