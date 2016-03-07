@@ -1,12 +1,13 @@
 package main.servlets;
 
 import main.Factory.CartShopFactory;
-import main.Factory.CustomerFactory;
 import main.Factory.CartTypes;
+import main.Factory.CustomerFactory;
 import main.dao.CustomerDAO;
 import main.service.cart.Cart;
-import main.shop.entity.CustomerOrder;
 import main.shop.entity.Customer;
+import main.shop.entity.CustomerOrder;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Created by PC on 07.03.2016.
+ */
 @WebServlet(name = "AddCustomerServlet", urlPatterns = {"/AddCustomerServlet"})
 public class AddCustomerServlet extends HttpServlet {
 
